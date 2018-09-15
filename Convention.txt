@@ -1,0 +1,20 @@
+#. variable definition 
+    constant Global variables are defined using a prefix 'k'
+
+#. class Definition 
+    *. class names always start with capital letters, and use camel case. 
+    *. class private variables have a trailing underscore and use camelcase e.g houseWares_. 
+    *. class public variables have a prefix 'p', and use camelcase  e.g pLandmarks. 
+    *. class methods start with Capital letters, and use camel case. 
+
+# Struct Definition 
+    *. Struct names always start with capital letters, and use camel case. 
+    *. public variables in structures are defined using camelcase. (but no prefix). 
+            e.g location, 
+    *. no private variables in Structs
+
+#. Function definition 
+    *. start with Capital letters, and camel case 
+
+#. temporary variables 
+    *. temporary variables are defined using small letters seperated by underscore 
