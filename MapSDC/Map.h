@@ -1,7 +1,7 @@
 #include <iostream> 
 #include <vector> 
 #include <istream> 
-#include "../CoreSDC/LocationState.h"
+#include "../CoreSDC/Pose.h"
 
 #ifndef LandMarkMap_H
 #define LandMarkMap_H

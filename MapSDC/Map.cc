@@ -1,7 +1,7 @@
 
 
 #include "Map.h"
-#include "../CoreSDC/LocationState.h"
+#include "../CoreSDC/Pose.h"
 #include <fstream> 
 
 
