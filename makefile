@@ -2,4 +2,4 @@
 
 .PHONY : clean 
 clean : 
-	rm -f *.o 
+	rm -f core ./MapSDC/*.o ./SensorSDC/*.o *~  
