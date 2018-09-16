@@ -5,21 +5,28 @@ State consists of position, orientation (heading direction: picth, yaw, roll)
 For this 2D Codebase, the yaw angle would be used only.
 */
 
-#ifndef LOCATION_H
-#define LOCATION_H
+#include "Units.h"
+
+#ifndef POSE_H
+#define POSE_H
 
 namespace Core{
 
+typedef int ID ; 
+
 struct Position{
-    double x;
-    double y; 
+    Unit::Meter x;
+    Unit::Meter y; 
 };
 
 struct Orientation{
-    double yaw;  // yaw angle. in radian
+    Unit::Radian yaw;  // yaw angle. in radian
 };
 
-
+struct Pose{
+    Position position; 
+    Orientation orientation; 
+};
 
 }
 

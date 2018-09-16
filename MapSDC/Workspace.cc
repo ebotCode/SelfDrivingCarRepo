@@ -16,7 +16,7 @@ int main(){
     Map::LandmarkMap map1; 
     map1.ReadLandmarkFromFile(landmarkfile);
 
-    map1.PrintMap();
+    map1.ShowInformation();
 
     return 0; 
 }

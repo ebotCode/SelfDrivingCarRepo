@@ -1,5 +1,7 @@
 #. variable definition 
-    constant Global variables are defined using a prefix 'k'
+    constant Global variables are defined in header "Constant" using all caps. e.g 
+        Constant::RIGHT_ANGLE
+    constant variables that are limited to a particular header file are defined using a prefix 'k'
 
 #. class Definition 
     *. class names always start with capital letters, and use camel case. 

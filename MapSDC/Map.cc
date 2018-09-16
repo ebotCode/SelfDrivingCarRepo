@@ -33,6 +33,8 @@ namespace Map{
             }
             std::cout << "done reading file" << std::endl;
             return true; 
+
+            input_file.close();
         }
         else{
             std::cout << "Could not read in landmark file"<<std::endl;
@@ -49,5 +51,9 @@ namespace Map{
             double y = pLandmarks.at(i).location.y;
             std::cout<<"Landmark ["<<i<<"] = loc("<<x<<" , "<<y<<") "<<std::endl;
         }
+    }
+
+    void LandmarkMap::ShowInformation(){
+        PrintMap();
     }
 }

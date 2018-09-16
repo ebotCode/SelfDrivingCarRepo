@@ -3,8 +3,8 @@
 #include <istream> 
 #include "../CoreSDC/Pose.h"
 
-#ifndef LandMarkMap_H
-#define LandMarkMap_H
+#ifndef Map_H
+#define Map_H
 
 namespace Map{
 
@@ -13,12 +13,12 @@ class GlobalMap{
 public:
     GlobalMap(){;}
     ~GlobalMap(){}
+    virtual void ShowInformation() = 0;
 
 };
 
 struct Landmark {
     Core::Position location;
-
 };
 
 class LandmarkMap : public GlobalMap {
@@ -33,6 +33,7 @@ public:
     // read landmarks from file 
     bool ReadLandmarkFromFile(std::fstream& input_file);
 
+    void  ShowInformation();
     // print the landmarks 
     void PrintMap();
 
