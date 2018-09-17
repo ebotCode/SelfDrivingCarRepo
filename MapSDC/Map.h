@@ -2,6 +2,7 @@
 #include <vector> 
 #include <istream> 
 #include "../CoreSDC/Pose.h"
+#include "../Common/Common.h"
 
 #ifndef Map_H
 #define Map_H
@@ -31,7 +32,7 @@ public:
     ~LandmarkMap();
 
     // read landmarks from file 
-    bool ReadLandmarkFromFile(std::fstream& input_file);
+    Flag::ReadFileFlag ReadLandmarkFromFile(std::fstream& input_file);
 
     void  ShowInformation();
     // print the landmarks 

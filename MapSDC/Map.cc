@@ -2,6 +2,7 @@
 
 #include "Map.h"
 #include "../CoreSDC/Pose.h"
+#include "../Common/Common.h"
 #include <fstream> 
 
 
@@ -9,19 +10,18 @@ namespace Map{
 
 
     LandmarkMap::LandmarkMap(){
-
+        pLandmarks.resize(0);
     }
 
     LandmarkMap::~LandmarkMap(){
 
     }
 
-    bool LandmarkMap::ReadLandmarkFromFile(std::fstream& input_file){
+    Flag::ReadFileFlag LandmarkMap::ReadLandmarkFromFile(std::fstream& input_file){
         /* Reads in the landmark from file. (.lm or .txt)
             each line in the The landmarkfile is a space seperated list of (x,y)
         */
         if (input_file.is_open()){
-            std::cout << "This file is open" << std::endl; 
             int nlandmarks; 
             input_file >> nlandmarks; 
             // read in all the landmark coordinates 
@@ -31,14 +31,12 @@ namespace Map{
                 input_file >> location.x >> location.y ;
                 pLandmarks.at(i).location = location; 
             }
-            std::cout << "done reading file" << std::endl;
-            return true; 
+            return Flag::READ_FILE_SUCCESSFUL; 
 
             input_file.close();
         }
         else{
-            std::cout << "Could not read in landmark file"<<std::endl;
-            return false; 
+            return Flag::FILE_NOT_OPEN; 
         }
     }
 

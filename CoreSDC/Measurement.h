@@ -9,7 +9,7 @@
 
 namespace Core{
 
-typedef Unit::Meter Distance; 
+using Distance = Unit::Meter ;
 
 struct Range{
     /*
@@ -18,8 +18,6 @@ struct Range{
     Distance distance; // distance 
     Orientation bearing; // orientation  
 };
-
-
 
 
 }

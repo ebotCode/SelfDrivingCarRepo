@@ -1,22 +1,30 @@
 #. variable definition 
-    constant Global variables are defined in header "Constant" using all caps. e.g 
+    *. constant Global variables (That would be used across different files ) are defined in header "Constant" located in CoreSDC using all caps. e.g 
         Constant::RIGHT_ANGLE
-    constant variables that are limited to a particular header file are defined using a prefix 'k'
+    *. constant variables that are limited to a particular header file are defined using a prefix 'k'.
+        e.g, in a header file "foo.h", kMeanCoefficient = 0.34; 
 
 #. class Definition 
     *. class names always start with capital letters, and use camel case. 
     *. class private variables have a trailing underscore and use camelcase e.g houseWares_. 
-    *. class public variables have a prefix 'p', and use camelcase  e.g pLandmarks. 
-    *. class methods start with Capital letters, and use camel case. 
+    *. class public variables have a prefix 'p', and use camelcase but without underscore  e.g pLandmarks. 
+    *. class methods (Public and Private) start with Capital letters, and use camel case. 
 
 # Struct Definition 
     *. Struct names always start with capital letters, and use camel case. 
-    *. public variables in structures are defined using camelcase. (but no prefix). 
+    *. public variables in structures are defined using camelcase (starts with lower case). (but no prefix). 
             e.g location, 
-    *. no private variables in Structs
+    *. no private variables in structs that define a 'quantity' or 'type'. 
+            e.g 
+                struct Orientation{
+                    Unit::Radian yaw;
+                    Unit::Radian roll;
+                    Unit::Radian pitch;
+                }
 
 #. Function definition 
     *. start with Capital letters, and camel case 
 
 #. temporary variables 
-    *. temporary variables are defined using small letters seperated by underscore 
+    *. temporary variables are defined using small letters seperated by underscore e.g 
+            double temp_mean = 0; 

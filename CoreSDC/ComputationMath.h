@@ -1,5 +1,4 @@
 
-#include <cmath> 
 #include "Constants.h"
 #include "Units.h"
 
@@ -9,13 +8,9 @@
 
 namespace Math{
 
-Unit::Degree RadToDeg(Unit::Radian radian){
-    return (radian * 180.0 / Constant::PI);
-}
+Unit::Degree RadToDeg(Unit::Radian radian);
 
-Unit::Radian DegToRad(Unit::Degree degree){
-    return (degree * Constant::PI/ 180.0);
-}
+Unit::Radian DegToRad(Unit::Degree degree);
 
 
 }

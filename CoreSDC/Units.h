@@ -5,9 +5,10 @@
 
 namespace Unit{
 
-typedef double Meter; 
-typedef double Radian;
-typedef double Degree;
+using Meter = double; 
+using Radian = double; 
+using Degree = double; 
+
 
  
 

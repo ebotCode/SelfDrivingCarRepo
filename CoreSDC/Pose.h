@@ -12,7 +12,7 @@ For this 2D Codebase, the yaw angle would be used only.
 
 namespace Core{
 
-typedef int ID ; 
+using ID = int ; 
 
 struct Position{
     Unit::Meter x;
